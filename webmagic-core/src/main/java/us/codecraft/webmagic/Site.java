@@ -187,7 +187,7 @@ public class Site {
     /**
      * The default charset if charset detected failed.
      *
-     * @return the defulat charset
+     * @return the default charset
      * @since 0.9.0
      */
     public String getDefaultCharset() {
