@@ -19,12 +19,12 @@ public class RequestTest {
     public void testEqualsAndHashCode() throws Exception {
         Request requestA = new Request("http://www.google.com/");
         Request requestB = new Request("http://www.google.com/");
-        assertThat(requestA.hashCode()).isEqualTo(requestB.hashCode());
+        assertThat(requestA.hashCode(31)).isEqualTo(requestB.hashCode(31));
         assertThat(requestA).isEqualTo(requestB);
         requestA.setMethod(HttpConstant.Method.GET);
         requestA.setMethod(HttpConstant.Method.POST);
         assertThat(requestA).isNotEqualTo(requestB);
-        assertThat(requestA.hashCode()).isNotEqualTo(requestB.hashCode());
+        assertThat(requestA.hashCode(31)).isNotEqualTo(requestB.hashCode(31));
     }
 
     @Test

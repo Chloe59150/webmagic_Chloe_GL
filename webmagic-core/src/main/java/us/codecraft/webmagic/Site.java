@@ -400,17 +400,18 @@ public class Site {
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode(int a ) {
+        // a = 31
         int result = domain != null ? domain.hashCode() : 0;
-        result = 31 * result + (userAgent != null ? userAgent.hashCode() : 0);
-        result = 31 * result + (defaultCookies != null ? defaultCookies.hashCode() : 0);
-        result = 31 * result + (charset != null ? charset.hashCode() : 0);
-        result = 31 * result + sleepTime;
-        result = 31 * result + retryTimes;
-        result = 31 * result + cycleRetryTimes;
-        result = 31 * result + timeOut;
-        result = 31 * result + (acceptStatCode != null ? acceptStatCode.hashCode() : 0);
-        result = 31 * result + (headers != null ? headers.hashCode() : 0);
+        result = a * result + (userAgent != null ? userAgent.hashCode() : 0);
+        result = a * result + (defaultCookies != null ? defaultCookies.hashCode() : 0);
+        result = a * result + (charset != null ? charset.hashCode() : 0);
+        result = a * result + sleepTime;
+        result = a * result + retryTimes;
+        result = a * result + cycleRetryTimes;
+        result = a * result + timeOut;
+        result = a * result + (acceptStatCode != null ? acceptStatCode.hashCode() : 0);
+        result = a * result + (headers != null ? headers.hashCode() : 0);
         return result;
     }
 

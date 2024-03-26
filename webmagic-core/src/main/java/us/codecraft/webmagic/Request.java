@@ -132,15 +132,17 @@ public class Request implements Serializable {
     }
 
     @Override
-    public int hashCode() {
+    public int hashCode(int a) {
         int result = url != null ? url.hashCode() : 0;
-        result = 31 * result + (method != null ? method.hashCode() : 0);
+        result = a * result + (method != null ? method.hashCode() : 0);
         return result;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
+        if (this == o) {
+            return true;
+        }
         if (o == null || getClass() != o.getClass()) return false;
 
         Request request = (Request) o;
