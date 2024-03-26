@@ -151,7 +151,7 @@ public class Site {
 
     /**
      * Set charset of page manually.<br>
-     * When charset is not set or set to null, it can be auto detected by Http header.
+     * When charset is not set or set to null, it can be auto-detected by Http header.
      *
      * @param charset charset
      * @return this
@@ -268,7 +268,7 @@ public class Site {
     }
 
     /**
-     * Put an Http header for downloader. <br>
+     * Put a Http header for downloader. <br>
      * Use {@link #addCookie(String, String)} for cookie and {@link #setUserAgent(String)} for user-agent. <br>
      *
      * @param key   key of http header, there are some keys constant in {@link HttpConstant.Header}
@@ -331,8 +331,8 @@ public class Site {
     }
 
     /**
-     * Whether use gzip. <br>
-     * Default is true, you can set it to false to disable gzip.
+     * Whether you use gzip. <br>
+     * Default is true, you can set it too false to disable gzip.
      *
      * @param useGzip useGzip
      * @return this
