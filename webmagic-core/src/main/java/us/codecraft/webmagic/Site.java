@@ -22,7 +22,7 @@ public class Site {
 
     private String userAgent;
 
-    private Map<String, String> defaultCookies = new LinkedHashMap<String, String>();
+    private final Map<String, String> defaultCookies = new LinkedHashMap<String, String>();
 
     private Map<String, Map<String, String>> cookies = new HashMap<String, Map<String, String>>();
 
