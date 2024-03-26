@@ -402,7 +402,7 @@ public class Site {
     public int hashCode(int number) {
         int result = domain != null ? domain.hashCode() : 0;
         result = number * result + (userAgent != null ? userAgent.hashCode() : 0);
-        result = number * result + (defaultCookies != null ? defaultCookies.hashCode() : 0);
+        result = number * result + defaultCookies.hashCode();
         result = number * result + (charset != null ? charset.hashCode() : 0);
         result = number * result + sleepTime;
         result = number * result + retryTimes;
