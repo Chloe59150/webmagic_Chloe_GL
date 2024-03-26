@@ -399,18 +399,17 @@ public class Site {
         return true;
     }
 
-    @Override
-    public int hashCode() {
+    public int hashCode(int number) {
         int result = domain != null ? domain.hashCode() : 0;
-        result = 31 * result + (userAgent != null ? userAgent.hashCode() : 0);
-        result = 31 * result + (defaultCookies != null ? defaultCookies.hashCode() : 0);
-        result = 31 * result + (charset != null ? charset.hashCode() : 0);
-        result = 31 * result + sleepTime;
-        result = 31 * result + retryTimes;
-        result = 31 * result + cycleRetryTimes;
-        result = 31 * result + timeOut;
-        result = 31 * result + (acceptStatCode != null ? acceptStatCode.hashCode() : 0);
-        result = 31 * result + (headers != null ? headers.hashCode() : 0);
+        result = number * result + (userAgent != null ? userAgent.hashCode() : 0);
+        result = number * result + (defaultCookies != null ? defaultCookies.hashCode() : 0);
+        result = number * result + (charset != null ? charset.hashCode() : 0);
+        result = number * result + sleepTime;
+        result = number * result + retryTimes;
+        result = number * result + cycleRetryTimes;
+        result = number * result + timeOut;
+        result = number * result + (acceptStatCode != null ? acceptStatCode.hashCode() : 0);
+        result = number * result + (headers != null ? headers.hashCode() : 0);
         return result;
     }
 

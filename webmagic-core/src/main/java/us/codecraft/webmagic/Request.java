@@ -133,10 +133,9 @@ public class Request implements Serializable {
         return this;
     }
 
-    @Override
-    public int hashCode() {
+    public int hashCode(int number) {
         int result = url != null ? url.hashCode() : 0;
-        result = 31 * result + (method != null ? method.hashCode() : 0);
+        result = number * result + (method != null ? method.hashCode() : 0);
         return result;
     }
 
