@@ -55,6 +55,7 @@ public abstract class AbstractDownloader implements Downloader {
         this.onSuccess(request);
     }
 
+
     /**
      * @param page the {@link Page}.
      * @param task the {@link Task}.

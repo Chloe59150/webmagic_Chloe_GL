@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.openqa.selenium.interactions.Actions;
 
 import us.codecraft.webmagic.Page;
 import us.codecraft.webmagic.Request;
@@ -103,6 +104,11 @@ public class SeleniumDownloader extends AbstractDownloader implements Closeable 
              *
              * @author: bob.li.0718@gmail.com
              */
+
+            WebDriver webDriver2 = webDriverPool.get();
+            WebElement webElement2 = webDriver2.findElement(By.xpath("/html"));
+            Actions actions = new Actions(webDriver2);
+            actions.moveToElement(webElement2).click().perform();
 
             WebElement webElement = webDriver.findElement(By.xpath("/html"));
             String content = webElement.getAttribute("outerHTML");
